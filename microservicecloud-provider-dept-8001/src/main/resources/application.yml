@@ -1,0 +1,38 @@
+server:
+  port: 8001
+
+spring:
+  #profiles: dev
+  application:
+    name: microservicecloud-config-dept-client
+  datasource:
+    url: jdbc:mysql://192.168.198.132:3306/clouddb01?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456zc
+    driver-class-name: com.mysql.jdbc.Driver
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+#mybatis 包扫描
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.atguigu.springcloud.entities
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true
+
+info:
+  app.name: atguigu-microservicecloud
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.vwrsion: $project.version$
