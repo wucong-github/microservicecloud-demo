@@ -13,15 +13,15 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ConfigBean {
 
-    @Bean
     @LoadBalanced // Ribbon 是一套客户端 负载均衡工具
-    public RestTemplate getRestTemplate(){
+    @Bean
+    public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
 
 
     @Bean
-    public IRule myRule(){
+    public IRule myRule() {
         // return new RandomRule();  // 用我们重新选择的随机算法，替代轮询
         //  return new RetryRule();   // 重试算法
 

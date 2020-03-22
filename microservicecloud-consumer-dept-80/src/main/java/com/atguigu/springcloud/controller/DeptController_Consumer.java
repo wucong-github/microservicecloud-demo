@@ -2,7 +2,6 @@ package com.atguigu.springcloud.controller;
 
 import com.atguigu.springcloud.entities.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,7 +13,7 @@ public class DeptController_Consumer {
 
     //private static final String REST_URL_PREFIX = "http://localhost:8001";
     // microservicecloud-dept   MICROSERVICECLOUD-DEPT 不区分大小写
-    private static final String REST_URL_PREFIX = "http://MICROSERVICECLOUD-DEPT";
+    private static final String REST_URL_PREFIX = "http://microservicecloud-dept";
     /**
      * 使用 RestTemplate 访问restful接口非常简单
      * （url,        requestMap, ResponseBean.class）
