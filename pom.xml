@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.atguigu.springcloud</groupId>
-    <artifactId>microservicecloid03</artifactId>
+    <artifactId>microserviceDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>microservicecloud-api</module>
@@ -22,7 +22,7 @@
         <module>microservicecloud-zuul-gateway-9527</module>
         <module>microservicecloud-config-3344</module>
         <module>microservicecloud-config-client-3355</module>
-        <module>microservicecloudconfig-eureka-client-7001</module>
+        <module>microservicecloud-config-eureka-client-7001</module>
         <module>microservicecloud-config-dept-client-8001</module>
     </modules>
     <dependencies>
@@ -76,7 +76,6 @@
                 <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
                 <version>1.4.5.RELEASE</version>
             </dependency>
-
 
 
             <dependency>
